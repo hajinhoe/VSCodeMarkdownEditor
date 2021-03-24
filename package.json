@@ -1,0 +1,138 @@
+{
+  "name": "markdownEditor",
+  "displayName": "MarkdownEditor",
+  "description": "a visual markdown editor",
+  "version": "0.0.1",
+  "publisher": "jinho",
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCustomEditor:markdown"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "markdown",
+        "displayName": "Markdown",
+        "selector": [
+          {
+            "filenamePattern": "*.mdf"
+          }
+        ]
+      }
+    ],
+    "configuration": {
+      "title": "MarkdownEditor",
+      "properties": {
+        "markdownEditor.autoSave.enabled": {
+          "type": "boolean",
+          "default": true
+        },
+        "markdownEditor.autoSave.delay": {
+          "type": "number",
+          "default": 1000,
+          "minimum": 1000
+        },
+        "markdownEditor.memorySave": {
+          "type": "boolean",
+          "default": false,
+          "description": "Reset hided tab's webview. It will reload contents every display. Need to restart vs code."
+        },
+        "markdownEditor.blockStyles.bold": {
+          "type": "string",
+          "default": "**",
+          "enum": ["**", "__"]
+        },
+        "markdownEditor.blockStyles.code": {
+          "type": "string",
+          "default": "```",
+          "enum": ["```", "~~~"]
+        },
+        "markdownEditor.blockStyles.italic": {
+          "type": "string",
+          "default": "*",
+          "enum": ["*", "_"]
+        },
+        "markdownEditor.showIcons": {
+          "type": "string",
+          "default": "code, table"
+        },
+        "markdownEditor.indentWithTabs": {
+          "type": "boolean",
+          "default": true
+        },
+        "markdownEditor.lineWrapping": {
+          "type": "boolean",
+          "default": false
+        },
+        "markdownEditor.parsingConfig.allowAtxHeaderWithoutSpace": {
+          "type": "boolean",
+          "default": false
+        },
+        "markdownEditor.parsingConfig.strikethrough": {
+          "type": "boolean",
+          "default": true
+        },
+        "markdownEditor.parsingConfig.underscoresBreakWords": {
+          "type": "boolean",
+          "default": false
+        },
+        "markdownEditor.placeholder": {
+          "type": "string",
+          "default": ""
+        },
+        "markdownEditor.renderingConfig.singleLineBreaks": {
+          "type": "boolean",
+          "default": true
+        },
+        "markdownEditor.renderingConfig.codeSyntaxHighlighting": {
+          "type": "boolean",
+          "default": false
+        },
+        "markdownEditor.spellChecker": {
+          "type": "boolean",
+          "default": false
+        },
+        "markdownEditor.styleSelectedText": {
+          "type": "boolean",
+          "default": true
+        },
+        "markdownEditor.tabSize": {
+          "type": "number",
+          "default": 4,
+          "minimum": 0
+        },
+        "markdownEditor.toolbarTips": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.54.0",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "eslint": "^7.19.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.2.1",
+    "typescript": "^4.1.3",
+    "vscode-test": "^1.5.0"
+  }
+}
