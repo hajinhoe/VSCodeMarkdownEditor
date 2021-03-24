@@ -1,6 +1,6 @@
 ## Features
 
-It use SimpleMarkdownEditor. it's file extension is .mdf. if you create .mdf file, you can write markdown with visual markdown editor.
+It use SimpleMarkdownEditor. it's file extension is .smd. if you create .smd file, you can write markdown with visual markdown editor.
 
 https://github.com/sparksuite/simplemde-markdown-editor
 
@@ -36,6 +36,10 @@ below are simple markdown editor's configurations.
 
 ## Release Notes
 
-### 1.0.0
+### 0.0.1
 
 Initial release
+
+### 0.0.2
+
+Modified viewType

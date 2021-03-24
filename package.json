@@ -2,8 +2,12 @@
   "name": "markdownEditor",
   "displayName": "MarkdownEditor",
   "description": "a visual markdown editor",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "publisher": "jinho",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hajinhoe/VSCodeMarkdownEditor.git"
+  },
   "engines": {
     "vscode": "^1.54.0"
   },
@@ -11,17 +15,17 @@
     "Other"
   ],
   "activationEvents": [
-    "onCustomEditor:markdown"
+    "onCustomEditor:simplemarkdown"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "customEditors": [
       {
-        "viewType": "markdown",
-        "displayName": "Markdown",
+        "viewType": "simplemarkdown",
+        "displayName": "SimpleMarkdown",
         "selector": [
           {
-            "filenamePattern": "*.mdf"
+            "filenamePattern": "*.smd"
           }
         ]
       }

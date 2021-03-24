@@ -158,5 +158,5 @@ class MarkdownEditorProvider {
     }
 }
 exports.MarkdownEditorProvider = MarkdownEditorProvider;
-MarkdownEditorProvider.viewType = 'markdown';
+MarkdownEditorProvider.viewType = 'simplemarkdown';
 //# sourceMappingURL=markdownEditor.js.map

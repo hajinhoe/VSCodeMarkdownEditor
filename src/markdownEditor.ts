@@ -65,7 +65,7 @@ export class MarkdownEditorProvider implements vscode.CustomTextEditorProvider {
     return providerRegistration;
   }
 
-  private static readonly viewType = 'markdown';
+  private static readonly viewType = 'simplemarkdown';
 
   constructor(
     private readonly context: vscode.ExtensionContext
